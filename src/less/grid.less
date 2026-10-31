@@ -1,0 +1,35 @@
+.generarCols(@prefijo, @columnas, @iteracion: 1)
+when (@iteracion =< @columnas)
+{
+    //.col-1{flex-basis:100%/12*1}
+    @selector: ~'.col-@{prefijo}@{iteracion}';// Este reemplaza encima de otros valores: iteporación
+    @ancho: (100%/@columnas * iteracion); // Lo aritmético debe estar en paréntesis
+
+    @{selector}{
+        flex-basis:@ancho;
+    }
+
+    .generarCols(@prefijo, @columnas, (@iteracion + 1)); // Lo aritmético debe estar en paréntesis
+} // iteración: numero que va ahorita, "when" es un guarda
+
+.grid{
+    .row{
+        display:flex;
+        flex-wrap: wrap;
+        [class*="col-"]{
+            flex:0 0; //No te estires ni te encojas
+            display: flex;
+        }
+        .generarCols('', 12);
+
+        @media(min-width:@media_breakpoints[tablet]){
+            .generarCols('-m',12)
+        }
+        @media(min-width:@media_breakpoints[desktop]){
+            .generarCols('-l',12)
+        }
+        @media(min-width:@media_breakpoints[wide]){
+            .generarCols('-xl',12)
+        }
+    }
+}

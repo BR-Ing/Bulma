@@ -1,0 +1,47 @@
+.pricing {
+    display: flex;
+    flex-direction: column;
+    row-gap: @units[3];
+    background-color: @secondary-bg-color;
+
+    h2 {
+        text-align: center;
+    }
+
+    .card-holder {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: @units[4];
+
+        .card {
+            .shadow-sm();
+
+            .card-header {
+                img {
+                    width: 320px;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+
+            [data-role="card-body"] {
+                padding: @units[3];
+                background-color: lighten(@secondary-bg-color, 40%);
+
+                h3 {
+                    margin: @units[0]
+                }
+            }
+
+            [data-role="card-footer"] {
+                padding: @units[3];
+
+                a {
+                    display: inline-block;
+                    .button();
+                }
+            }
+        }
+    }
+}

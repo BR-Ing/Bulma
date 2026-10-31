@@ -1,0 +1,66 @@
+header{
+    background-color: @secondary-bg-color;
+    color: @secondary-tx-color;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width:@media_breakpoints[desktop]){
+        flex-direction: row;
+            
+    }
+    .brand-section { /*Parte del contenido de las reglas de header, lo mismo que header .brand-section{}*/
+        display:flex;
+        flex:1 0; // El 0 "para que no se encoja"
+        column-gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding:0.5rem;
+        @media (min-width:@media_breakpoints[desktop]){
+            justify-content: start;
+        }
+        img{
+            width:48px;
+            height: 48px;
+            border-radius:50px;
+            object-fit: cover;
+        }
+        h1 {
+            margin:0px;
+            padding:0px;
+        }
+    }
+    nav{
+        width: 100%;
+        @media (min-width:@media_breakpoints[tablet]){
+            width: initial;
+        }
+        ul{
+            padding:0px;
+            list-style:none;
+            @media (min-width:@media_breakpoints[tablet]){ //No le tengo que poner otro selector
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li{
+                border-bottom: 1px solid @primary-bg-color;
+                @media (min-width:@media_breakpoints[tablet]){
+                    border-bottom:none;
+                }
+                a{
+                    width:100%;
+                    text-align: center;
+                    text-decoration: none;
+                    display:block;
+                    padding:0.75rem 1rem;
+                    color:@secondary-tx-color;
+                    &:hover {// Pseudo clase
+                        background-color: darken(@secondary-bg-color, 30%); // Less permite funcionar con colores nativas, darken: función propia de less para oscurecer, no existe en css
+
+                    }
+                }
+            }
+        }
+    }
+}
+

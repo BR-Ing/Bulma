@@ -15,9 +15,11 @@
         column-gap: @units[4];
 
         .card {
+            background-color: lighten(@secondary-bg-color, 40%);
             .shadow-sm();
 
             .card-header {
+                height: 200px;
                 img {
                     width: 320px;
                     height: 200px;
@@ -27,18 +29,17 @@
 
             [data-role="card-body"] {
                 padding: @units[3];
-                background-color: lighten(@secondary-bg-color, 40%);
-
                 h3 {
                     margin: @units[0]
                 }
             }
-
             [data-role="card-footer"] {
+                min-height: 0px;
                 padding: @units[3];
-
+                text-align: right;
                 a {
                     display: inline-block;
+                    text-decoration: none;
                     .button();
                 }
             }

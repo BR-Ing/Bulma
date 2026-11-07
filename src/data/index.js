@@ -1,6 +1,7 @@
 import indexPageData from './pages/indexPage.js';
 const getPageContext = (pagePath) =>{
     console.log("getPageContext Invoked:", pagePath); //De nada me sirve, esto es interno
+    let context= {};
     switch(pagePath){
         case "/index1.html":
             context = {...context, ...indexPageData}; // Destruir: "..."

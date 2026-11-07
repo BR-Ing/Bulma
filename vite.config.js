@@ -38,7 +38,8 @@ export default defineConfig(
         },
         plugins: [
             new Handlebars({
-                partialDirectory: "src/components"
+                partialDirectory: "src/components",
+                context: getPageContext,
             })
         ]
     }

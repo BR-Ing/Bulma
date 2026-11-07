@@ -1,5 +1,5 @@
 const indexPageData = {
-    pricingCards: [,
+    pricingCards: [
         {
             "card_img": "https://placehold.co/320x200",
             "card_img_alt": "Card 1",

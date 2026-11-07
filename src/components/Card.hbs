@@ -1,0 +1,15 @@
+<div data-role="card" class="card">
+    <div data-role="card-header" class="card-header">
+        <img src="{{card_img}}" alt="{{card_img_alt}}" />
+    </div>
+    <div data-role="card-body class="{{card_class}}"">
+        <h3>{{card_title}}</h3>
+        <p>{{card_description}}</p>
+        {{#if card_price}} <!-- Si hay, imprime precio, sino, no -->
+        <em>{{card_price}}</em>
+        {{/if}}
+    </div>
+    <div data-role="card-footer" class="{{card_class}}">
+        <a href="{{card_cta_uri}}">{{card_cta_txt}}</a>
+    </div>
+</div>

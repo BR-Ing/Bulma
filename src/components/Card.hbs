@@ -2,10 +2,10 @@
     <div data-role="card-header" class="card-header">
         <img src="{{card_img}}" alt="{{card_img_alt}}" />
     </div>
-    <div data-role="card-body class="{{card_class}}"">
+    <div data-role="card-body" class="{{card_class}}">
         <h3>{{card_title}}</h3>
         <p>{{card_description}}</p>
-        {{#if card_price}} <!-- Si hay, imprime precio, sino, no -->
+        {{#if card_price}}
         <em>{{card_price}}</em>
         {{/if}}
     </div>

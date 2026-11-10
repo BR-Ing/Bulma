@@ -29,7 +29,7 @@ const indexPageData = {
             "card_cta_uri": "#addToCart",
             "card_cta_txt": "Subscribirse",
             "card_class": "",
-        },
+        }/*,
         {
             "card_img": "https://placehold.co/320x200",
             "card_img_alt": "Card 4",
@@ -39,7 +39,7 @@ const indexPageData = {
             "card_cta_uri": "#addToCart",
             "card_cta_txt": "Subscribirse",
             "card_class": "",
-        }
+        }*/
     ]
 }
 

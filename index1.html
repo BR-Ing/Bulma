@@ -25,7 +25,7 @@ titulo="Portales Web 2"}}
 
                 <section class="card-holder">
                 <!-- Las variables empiezan con el nombre de dominio -->
-                    {{>Card
+                    <!--  {{>Card
                         card_img="https://placehold.co/320x200"
                         card_img_alt="Card 1"
                         card_title="Plan A"
@@ -68,7 +68,11 @@ titulo="Portales Web 2"}}
                         card_cta_uri="#addToCart"
                         card_cta_txt="Subscribirse"
                         card_class=""
-                    }}
+                    }} -->
+                    <!-- Desde línea 8 de Card.hbs Si hay, imprime precio, sino, no -->
+                    {{#each pricingCards}}
+                        {{>Card }}
+                    {{/each}}
                 </section>
             </section>
         </section>
